@@ -1,36 +1,64 @@
 .Bg-navbar {
-    background-color:#f72210;
+    background-color: #f72210;
 }
-.navbar-light
-.navbar-toggler-icon
-{
+
+.navbar-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
-    
+
 }
+
 .navbar-toggler {
-    border-color:transparent !important; 
-    padding: 0 !important; 
+    border-color: transparent !important;
+    padding: 5px !important;
 }
+
+.navbar-toggler-icon {
+    width: 1.2em;
+    height: 1em;
+}
+
 svg {
     fill: #fff;
     height: 20px;
 }
+
 .Custom-button {
     position: relative;
-    font: bold 13px sans-serif;
+    font: bold 11px sans-serif;
     text-transform: uppercase;
     display: inline-block;
-    padding: 10px;
+    padding: 6px;
+    border-radius: 0;
 }
+
 .sign-in-btn {
     margin-left: -15px;
     margin-right: 5px;
     border: 0 !important;
 }
+
 .subscribe {
-    color:#f72210;
+    color: #f72210;
 }
+
 .fs-small {
     font-size: 13px;
     line-height: 18px;
+}
+
+.Img-fluid {
+    max-width: 50%;
+    height: auto;
+    float: left;
+    padding-right: 10px;
+}
+
+.icon-n {
+    background: url("https://s.newsweek.com/sites/www.newsweek.com/themes/newsweek/images/logo-n1.svg") center/contain no-repeat #F72214;
+    flex: none;
+    display: block;
+    width: 29px;
+    height: 28px;
+    margin-right: 10px;
+    fill: #000 !important;
 }
