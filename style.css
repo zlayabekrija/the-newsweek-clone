@@ -1,0 +1,36 @@
+.Bg-navbar {
+    background-color:#f72210;
+}
+.navbar-light
+.navbar-toggler-icon
+{
+    background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+    
+}
+.navbar-toggler {
+    border-color:transparent !important; 
+    padding: 0 !important; 
+}
+svg {
+    fill: #fff;
+    height: 20px;
+}
+.Custom-button {
+    position: relative;
+    font: bold 13px sans-serif;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px;
+}
+.sign-in-btn {
+    margin-left: -15px;
+    margin-right: 5px;
+    border: 0 !important;
+}
+.subscribe {
+    color:#f72210;
+}
+.fs-small {
+    font-size: 13px;
+    line-height: 18px;
+}
