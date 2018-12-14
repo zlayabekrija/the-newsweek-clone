@@ -47,7 +47,7 @@ svg {
 }
 
 .Img-fluid {
-    max-width: 50%;
+    max-width: 35%;
     height: auto;
     float: left;
     padding-right: 10px;
@@ -62,12 +62,14 @@ svg {
     margin-right: 10px;
     fill: #000 !important;
 }
+
 .Bottom {
     position: absolute;
     bottom: 0;
 }
+
 .icon-n-slideshow {
-   
+
     background: url(" https://s.newsweek.com/sites/www.newsweek.com/themes/newsweek/images/logo-n1.svg") center/contain no-repeat #F72214;
     flex: none;
     display: block;
@@ -75,30 +77,44 @@ svg {
     height: 28px;
     margin-right: 10px;
     fill: #000 !important;
-    box-shadow:4px 4px #F72214;
+    box-shadow: 4px 4px #F72214;
 }
+
 .icon-slide {
-    
+
     background: url(https://s.newsweek.com/sites/www.newsweek.com/themes/newsweek/images/icon-slideshows-nw.png) center/contain no-repeat;
     flex: none;
     display: block;
     width: 63px;
     height: 50px;
     margin-right: 10px;
-    
-   
+
+
 }
+
 .logo-footer {
     fill: #F72214;
     fill: #F72214;
     height: 36px;
 }
+
 .larger-text {
     font-size: 1.5rem;
 }
+
 .card-no-border {
     border-radius: 0 !important;
 }
+
 .card {
     border-radius: 0 !important;
+}
+
+.top-calc {
+    width: calc(100vw - 200px);
+}
+
+.opin {
+    max-width: 80px;
+    max-height: 80px;
 }
