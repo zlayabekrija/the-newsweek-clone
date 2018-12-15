@@ -141,4 +141,21 @@ svg {
     .h-lg-25 {
         height: 25%;
     }
+
+    .blinking-logo {
+        font-size: 0;
+        background: url(https://s.newsweek.com/sites/www.newsweek.com/themes/newsweek/images/NDELIBLE.black3.gif) 15px 1px/63px no-repeat;
+        display: block;
+    }
+
+    .rectangle-red {
+        position: absolute;
+        right: 0;
+        content: "";
+        display: block;
+        width: 87px;
+        background-color: #f72210;
+        border-left: 12px solid #fff;
+        border-top: 13px solid #f72210;
+    }
 }
