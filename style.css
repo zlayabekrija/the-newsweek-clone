@@ -111,10 +111,34 @@ svg {
 }
 
 .top-calc {
-    width: calc(100vw - 200px);
+    /* width: calc(100vw - 200px); */
 }
 
 .opin {
     max-width: 80px;
     max-height: 80px;
+}
+
+@media screen and (min-width: 992px) {
+    .Bg-navbar {
+        height: 95px;
+    }
+
+    #Layer_1 {
+        width: 396px;
+        height: 60px;
+        margin: 10px auto 0;
+    }
+
+    .Custom-button {
+        font: bold 16px sans-serif;
+    }
+
+    .w-lg-50 {
+        width: 50%;
+    }
+
+    .h-lg-25 {
+        height: 25%;
+    }
 }
