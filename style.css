@@ -146,6 +146,8 @@ svg {
         font-size: 0;
         background: url(https://s.newsweek.com/sites/www.newsweek.com/themes/newsweek/images/NDELIBLE.black3.gif) 15px 1px/63px no-repeat;
         display: block;
+        background-position: 14px 3px;
+        width: 89px;
     }
 
     .rectangle-red {
@@ -157,5 +159,26 @@ svg {
         background-color: #f72210;
         border-left: 12px solid #fff;
         border-top: 13px solid #f72210;
+    }
+
+    .Bheader-ul {
+        letter-spacing: 1px;
+    }
+
+    .max-wid {
+        max-width: 1310px;
+        position: relative;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .Bheader-ul {
+        letter-spacing: -1px;
+    }
+
+    .px-lg-4 {
+        padding-left: 1em !important;
+        padding-right: 1em !important;
     }
 }
