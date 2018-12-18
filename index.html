@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Newsweek</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="screen" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="max-wid">
+    <header>
+        <div class="container-fluid px-0">
+            <nav class="navbar navbar-expand-lg navbar-light Bg-navbar px-0 py-0">
+                <div class="row w-100 h-100">
+                    <div class="d-none d-lg-inline-block col-lg-3 order-1 text-white h-100 p-5 mt-2">
+                        <p>Fri, Dec 14, 2018</p>
+                    </div>
+                    <div class="col-6 col-md-6 col-lg-6 order-2 order-lg-1 align-self-start text-lg-center News-week-logo h-100 pl-md-4 pl-lg-4 pt-lg-1">
+                        <a class="navbar-brand" href="#">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                x="0px" y="0px" viewBox="0 0 395.6 60" style="enable-background:new 0 0 395.6 60;"
+                                xml:space="preserve">
+                                <g>
+                                    <path class="st0" d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7"></path>
+                                </g>
+                            </svg>
+                        </a>
+
+                    </div>
+                    <div class="col-5 col-md-5 col-lg-3 order-3 pr-0 pr-lg-3 align-self-center h-100 pt-lg-5">
+                        <div class="top-calc">
+                            <div class="text-right">
+                                <button class="btn btn-outline-light Custom-button px-2 sign-in-btn">SIGN IN</button>
+                                <button class="btn btn-light Custom-button px-0 subscribe w-lg-50 h-lg-25">SUBSCRIBE</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-1 col-md-1 d-lg-none order-4 px-0 text-right h-100">
+                        <button class="navbar-toggler  px-3" type="button" data-toggle="collapse" data-target="#navbarText"
+                            aria-expanded="false" aria-label="Toggle navigation" style="margin-right: -10px;">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="ul-header container-fluid d-none d-lg-inline-block border-bottom">
+            <div class="rectangle-red"></div>
+            <ul class="list-unstyled row font-weight-bold my-2 pt-2 text-center Bheader-ul">
+                <li class="col-lg-auto border-right px-lg-4">US</li>
+                <li class="col-lg-auto border-right px-lg-4">WORLD</li>
+                <li class="col-lg-auto border-right px-lg-4">BUISNESS</li>
+                <li class="col-lg-auto border-right px-lg-4">TECH & SCIENCE</li>
+                <li class="col-lg-auto border-right px-lg-4">CULTURE</li>
+                <li class="col-lg-auto border-right px-lg-4">SPORTS</li>
+                <li class="col-lg-auto border-right px-lg-4">HEALTH</li>
+                <li class="col-lg-auto border-right px-lg-4">OPINION</li>
+                <li class="col-lg-auto border-right blinking-logo"></li>
+                <li class="col-lg-auto pr-0 font-weight-normal">SEARCH <i class="fa fa-search"></i></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container-fluid py-3">
+        <div class="row">
+            <div class="col-md-7 col-lg-5 order-2">
+                <h6 class="text-muted pt-2">TOP STORY</h6>
+                <div class="card mb-3 border-0">
+                    <img class="card-img-top" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/md/public/2018/12/11/feevangelical01use-banner.jpg"
+                        alt="Card image cap">
+                    <div class="card-body p-0">
+                        <h5 class="card-title font-weight-bold">Losing my religion : Meet the Exvangelicans</h5>
+                        <p class="card-text fs-small">Republicans relied on evangelicals for decades. But a political
+                            reckoning
+                            is afoo</p>
+                        <h5 class="card-title font-weight-bold border-top pt-2">Losing my religion : Meet the
+                            Exvangelicans</h5>
+                    </div>
+                </div>
+                <h6 class="text-muted">MORE STORIES</h6>
+                <div class="card mb-3 border-0">
+                    <!-- More Stories -->
+                    <div class="card-body px-0 py-3 border-top">
+                        <img class="Img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/embed_tablet/public/2018/12/13/gettyimages-1071834222.jpg"
+                            alt="Card image cap">
+                        <h6 class="card-title font-weight-bold">TRUMP CLAIMS MEXICO IS STILL 'PAYING FOR THE WALL,</h6>
+                        <p class="card-text fs-small">One way or the other, Mexico is going to be paying for the Wall,"
+                            Trump
+                            said in an early Thursday morning tweet. "This has never changed</p>
+                    </div>
+                    <div class="card-body px-0 py-3 border-top">
+                        <img class="Img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/embed_tablet/public/2018/12/13/gettyimages-1071834222.jpg"
+                            alt="Card image cap">
+                        <h6 class="card-title font-weight-bold">TRUMP CLAIMS MEXICO IS STILL 'PAYING FOR THE WALL,</h6>
+                        <p class="card-text fs-small">One way or the other, Mexico is going to be paying for the Wall,"
+                            Trump
+                            said in an early Thursday morning tweet. "This has never changed</p>
+                    </div>
+                    <div class="card-body px-0 py-3 border-top">
+                        <img class="Img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/embed_tablet/public/2018/12/13/gettyimages-1071834222.jpg"
+                            alt="Card image cap">
+                        <h6 class="card-title font-weight-bold">TRUMP CLAIMS MEXICO IS STILL 'PAYING FOR THE WALL,</h6>
+                        <p class="card-text fs-small">One way or the other, Mexico is going to be paying for the Wall,"
+                            Trump
+                            said in an early Thursday morning tweet. "This has never changed</p>
+                    </div>
+                    <div class="card-body px-0 py-3 border-top">
+                        <img class="Img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/embed_tablet/public/2018/12/13/gettyimages-1071834222.jpg"
+                            alt="Card image cap">
+                        <h6 class="card-title font-weight-bold">TRUMP CLAIMS MEXICO IS STILL 'PAYING FOR THE WALL,</h6>
+                        <p class="card-text fs-small">One way or the other, Mexico is going to be paying for the Wall,"
+                            Trump
+                            said in an early Thursday morning tweet. "This has never changed</p>
+                    </div>
+                    <div class="card-body px-0 py-3 border-top">
+                        <img class="Img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/embed_tablet/public/2018/12/13/gettyimages-1071834222.jpg"
+                            alt="Card image cap">
+                        <h6 class="card-title font-weight-bold">TRUMP CLAIMS MEXICO IS STILL 'PAYING FOR THE WALL,</h6>
+                        <p class="card-text fs-small">One way or the other, Mexico is going to be paying for the Wall,"
+                            Trump
+                            said in an early Thursday morning tweet. "This has never changed</p>
+                    </div>
+                    <div class="card-body px-0 py-3 border-top">
+                        <img class="Img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/embed_tablet/public/2018/12/13/gettyimages-1071834222.jpg"
+                            alt="Card image cap">
+                        <h6 class="card-title font-weight-bold">TRUMP CLAIMS MEXICO IS STILL 'PAYING FOR THE WALL,</h6>
+                        <p class="card-text fs-small">One way or the other, Mexico is going to be paying for the Wall,"
+                            Trump
+                            said in an early Thursday morning tweet. "This has never changed</p>
+                    </div>
+                    <div class="card-body px-0 py-3 border-top">
+                        <img class="Img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/embed_tablet/public/2018/12/13/gettyimages-1071834222.jpg"
+                            alt="Card image cap">
+                        <h6 class="card-title font-weight-bold">TRUMP CLAIMS MEXICO IS STILL 'PAYING FOR THE WALL,</h6>
+                        <p class="card-text fs-small">One way or the other, Mexico is going to be paying for the Wall,"
+                            Trump
+                            said in an early Thursday morning tweet. "This has never changed</p>
+                    </div>
+                    <div class="card-body px-0 py-3 border-top">
+                        <img class="Img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/embed_tablet/public/2018/12/13/gettyimages-1071834222.jpg"
+                            alt="Card image cap">
+                        <h6 class="card-title font-weight-bold">TRUMP CLAIMS MEXICO IS STILL 'PAYING FOR THE WALL,</h6>
+                        <p class="card-text fs-small">One way or the other, Mexico is going to be paying for the Wall,"
+                            Trump
+                            said in an early Thursday morning tweet. "This has never changed</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 col-lg order-1">
+
+                <!-- Featured stories -->
+                <h6 class="text-muted pt-2">FEATURED STORIES</h6>
+                <div class="card mb-3 border-0">
+                    <img class="card-img-top" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/md/public/2018/12/11/feevangelical01use-banner.jpg"
+                        alt="Card image cap">
+                    <div class="card-body p-0">
+                        <h5 class="card-title font-weight-bold">Losing my religion : Meet the Exvangelicans</h5>
+                        <p class="card-text fs-small">Republicans relied on evangelicals for decades. But a
+                            political
+                            reckoning
+                            is afoo</p>
+                        <h5 class="card-title font-weight-bold border-top pt-2">Losing my religion : Meet the
+                            Exvangelicans</h5>
+                    </div>
+                </div>
+                <div class="hospital pb-4 d-md-none">
+                    <div class="text-center">
+
+                        <img class="img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2018/10/10/2018-1004-hospitals-article7.png"
+                            alt="best hospital">
+                    </div>
+                    <h6>World's Best Hospital 2019</h6>
+                    <p class="fs-small pb-3 border-bottom">
+                        Newsweek has partnered with Statista Inc., the global market research and consumer data
+                        firm, to
+                        develop the first-ever ranking of the world’s best hospitals. For every reader who
+                        participates,
+                        Statista will make a donation to Médecins Sans Frontières, the international humanitarian
+                        organization that provides urgent medical relief to people in conflict and disaster zones.
+                        Thank
+                        you for taking part in this initiative.
+                    </p>
+                    <h6>Best Children's Hospital in the U.S. Revealed</h6>
+                </div>
+
+                <div class="card mb-3 border-0">
+                    <img class="card-img-top" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/md/public/2018/12/11/feevangelical01use-banner.jpg"
+                        alt="Card image cap">
+                    <div class="card-body p-0">
+                        <h5 class="card-title font-weight-bold">Losing my religion : Meet the Exvangelicans</h5>
+                        <p class="card-text fs-small">Republicans relied on evangelicals for decades. But a
+                            political
+                            reckoning
+                            is afoo</p>
+                        <h5 class="card-title font-weight-bold pb-2">The Hunted Democrats</h5>
+                    </div>
+                </div>
+
+                <div class="card mb-3 border-0">
+                    <img class="card-img-top" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/md/public/2018/12/11/feevangelical01use-banner.jpg"
+                        alt="Card image cap">
+                    <div class="card-body p-0">
+                        <h5 class="card-title font-weight-bold">Losing my religion : Meet the Exvangelicans</h5>
+                        <p class="card-text fs-small">Republicans relied on evangelicals for decades. But a
+                            political
+                            reckoning
+                            is afoo</p>
+                        <h5 class="card-title font-weight-bold pb-2">‘Fox & Friends’ Grills Pompeo on Jamal
+                            Khashoggi
+                            Murder</h5>
+                    </div>
+                </div>
+                <!-- Featured stories end -->
+            </div>
+            <div class="col-md-12 col-lg order-3">
+                <!-- Opinion starts -->
+                <h6 class="text-muted pt-2">OPINION</h6>
+                <div class="row mt-2 pb-2 border-bottom">
+                    <div class="col-3 opin">
+                        <img class="img-fluid rounded-circle" style="max-width: 130%;" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/square_thumbnail/public/23544/profile_image/nw-columnists-ban-ki-moon.png"
+                            alt="">
+                    </div>
+                    <div class="col-9">
+                        <h6>Only Two Healthcare Systems Exist</h6>
+                        <p class="fs-small">BY BAN KI-MOON</p>
+                    </div>
+                </div>
+                <div class="row mt-2 pb-2 border-bottom">
+                    <div class="col-3 opin">
+                        <img class="img-fluid rounded-circle" style="max-width: 130%;" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/square_thumbnail/public/23544/profile_image/nw-columnists-ban-ki-moon.png"
+                            alt="">
+                    </div>
+                    <div class="col-9">
+                        <h6>Only Two Healthcare Systems Exist</h6>
+                        <p class="fs-small">BY BAN KI-MOON</p>
+                    </div>
+                </div>
+                <div class="row mt-2 pb-2 border-bottom">
+                    <div class="col-3 opin">
+                        <img class="img-fluid rounded-circle" style="max-width: 130%;" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/square_thumbnail/public/23544/profile_image/nw-columnists-ban-ki-moon.png"
+                            alt="">
+                    </div>
+                    <div class="col-9">
+                        <h6>Only Two Healthcare Systems Exist</h6>
+                        <p class="fs-small">BY BAN KI-MOON</p>
+                    </div>
+                </div>
+                <div class="row mt-2 pb-2 border-bottom">
+                    <div class="col-3 opin">
+                        <img class="img-fluid rounded-circle" style="max-width: 130%;" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/square_thumbnail/public/23544/profile_image/nw-columnists-ban-ki-moon.png"
+                            alt="">
+                    </div>
+                    <div class="col-9">
+                        <h6>Only Two Healthcare Systems Exist</h6>
+                        <p class="fs-small">BY BAN KI-MOON</p>
+                    </div>
+                </div>
+                <div class="row mt-2 pb-2 border-bottom">
+                    <div class="col-3 opin">
+                        <img class="img-fluid rounded-circle" style="max-width: 130%;" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/square_thumbnail/public/23544/profile_image/nw-columnists-ban-ki-moon.png"
+                            alt="">
+                    </div>
+                    <div class="col-9">
+                        <h6>Only Two Healthcare Systems Exist</h6>
+                        <p class="fs-small">BY BAN KI-MOON</p>
+                    </div>
+                </div>
+                <div class="row mt-2 pb-2 border-bottom">
+                    <div class="col-3 opin">
+                        <img class="img-fluid rounded-circle" style="max-width: 130%;" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/square_thumbnail/public/23544/profile_image/nw-columnists-ban-ki-moon.png"
+                            alt="">
+                    </div>
+                    <div class="col-9">
+                        <h6>Only Two Healthcare Systems Exist</h6>
+                        <p class="fs-small">BY BAN KI-MOON</p>
+                    </div>
+                </div>
+
+                <div class="latest-news">
+
+                    <h6 class="text-muted pt-4">LATEST NEWS</h6>
+
+                    <div class="row py-2 border-bottom">
+                        <div class="col-6 col-md-3">
+                            <img class="img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/tablet/public/2018/12/13/snow-map.jpg"
+                                alt="something">
+                        </div>
+                        <div class="col-6 col-md-9 pl-0 pt-2">
+                            <h6>How Much Snow Will New York, Connecticut Get Today?</h6>
+                        </div>
+                    </div>
+                    <div class="row py-2 border-bottom">
+                        <div class="col-6 col-md-3">
+                            <img class="img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/tablet/public/2018/12/13/snow-map.jpg"
+                                alt="something">
+                        </div>
+                        <div class="col-6 col-md-9 pl-0 pt-2">
+                            <h6>How Much Snow Will New York, Connecticut Get Today?</h6>
+                        </div>
+                    </div>
+                    <div class="row py-2 border-bottom">
+                        <div class="col-6 col-md-3">
+                            <img class="img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/tablet/public/2018/12/13/snow-map.jpg"
+                                alt="something">
+                        </div>
+                        <div class="col-6 col-md-9 pl-0 pt-2">
+                            <h6>How Much Snow Will New York, Connecticut Get Today?</h6>
+                        </div>
+                    </div>
+                    <div class="row py-2 border-bottom">
+                        <div class="col-6 col-md-3">
+                            <img class="img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/tablet/public/2018/12/13/snow-map.jpg"
+                                alt="something">
+                        </div>
+                        <div class="col-6 col-md-9 pl-0 pt-2">
+                            <h6>How Much Snow Will New York, Connecticut Get Today?</h6>
+                        </div>
+                    </div>
+                    <div class="row py-2 border-bottom">
+                        <div class="col-6 col-md-3">
+                            <img class="img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/tablet/public/2018/12/13/snow-map.jpg"
+                                alt="something">
+                        </div>
+                        <div class="col-6 col-md-9 pl-0 pt-2">
+                            <h6>How Much Snow Will New York, Connecticut Get Today?</h6>
+                        </div>
+                    </div>
+                    <div class="row py-2 border-bottom">
+                        <div class="col-6 col-md-3">
+                            <img class="img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/tablet/public/2018/12/13/snow-map.jpg"
+                                alt="something">
+                        </div>
+                        <div class="col-6 col-md-9 pl-0 pt-2">
+                            <h6>How Much Snow Will New York, Connecticut Get Today?</h6>
+                        </div>
+                    </div>
+                    <div class="row py-2 border-bottom">
+                        <div class="col-6 col-md-3">
+                            <img class="img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/tablet/public/2018/12/13/snow-map.jpg"
+                                alt="something">
+                        </div>
+                        <div class="col-6 col-md-9 pl-0 pt-2">
+                            <h6>How Much Snow Will New York, Connecticut Get Today?</h6>
+                        </div>
+                    </div>
+                    <div class="row py-2 border-bottom">
+                        <div class="col-6 col-md-3">
+                            <img class="img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/tablet/public/2018/12/13/snow-map.jpg"
+                                alt="something">
+                        </div>
+                        <div class="col-6 col-md-9 pl-0 pt-2">
+                            <h6>How Much Snow Will New York, Connecticut Get Today?</h6>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Sign up letter -->
+                <div class="row justify-content-center">
+
+                    <div class="card bg-light mt-4 align-center">
+                        <div class="card-body border-0">
+                            <div class="row">
+                                <div class="col-2 pr-3 pt-2">
+                                    <span class="icon-n"></span>
+                                </div>
+                                <div class="col-10 text-left px-1  font-weight-bold">SIGN UP FOR OUR NEWSLETTER</div>
+                            </div>
+                            <button class="btn btn-dark font-weight-bold mt-3">SIGN UP</button>
+                            <p class="font-weight-bold fs-small text-muted mt-2">Update Your Preferences</p>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- End of sign up letter -->
+            </div>
+        </div>
+        <!-- More stories end -->
+
+
+        <!-- Sponsor insight -->
+
+        <div class="card bg-light mb-3 mt-3 w-100 d-sm-none">
+            <div class="card bg-dark text-white">
+                <img class="card-img card-no-border" src="https://s.newsweek.com/sites/www.newsweek.com/files/expo_22492_small_expo_advert_on_home_page_685px_x_456px.jpg"
+                    alt="Card image">
+                <div class="card-img-overlay pb-0 pl-0">
+                    <button class="btn btn-light Bottom text-info font-weight-bold">SPONSOR INSIGHT</button>
+                </div>
+            </div>
+            <div class="card-header border-0 font-weight-bold">HOW INOVATION IS TRANSFORMING A NATION</div>
+            <div class="card-body">
+
+                <p class="card-text fs-small">It all began with a master innovator. The UAE's founding father,
+                    Sheikh Zayed, was a man with big ideas, open to new methods and peoples. Today the country
+                    masters Blockchain, hosts 200 nationalities and ranks first in innovation in the Arab World.</p>
+            </div>
+        </div>
+        <!-- End of the Sponsor insight -->
+
+        <div class="row px-4 d-md-none">
+            <div class="card bg-white mb-3 border-0 px-2 w-100">
+                <div class="card bg-dark text-white mt-3 border-0">
+                    <img class="card-img" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/embed-xs/public/2018/12/06/20181214cover1800x2400.jpg"
+                        alt="Card image cap">
+                    <div class="card-img-overlay p-0">
+                        <button class="btn btn-light Bottom text-info font-weight-bold">DECEMBER ISSUE</button>
+                    </div>
+                </div>
+                <div class="card-header border-0 font-weight-bold">SEE ALL FEATURES</div>
+            </div>
+        </div>
+
+        <!-- IN THE MAGAZINE -->
+        <div class="container-fluid">
+            <div class="row no-gutter justify-content-center py-2 pt-md-3">
+                <span class="icon-n"></span>
+                <div>IN THE MAGAZINE</div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 magz">
+                    <div class="w-100">
+                        <div class="col">
+
+                            <img class="img-fluid w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/md_thumb/public/2018/12/11/periran01ususe-banner.jpg"
+                                alt="something">
+                        </div>
+
+                    </div>
+                    <div class="row mt-1 py-2 pl-3 px-lg-5 mr-lg-0 ">
+                        <div class="col-5 col-md-12 col-lg-9 btn btn-danger font-weight-bold fs-small">DOWNLOADS</div>
+                        <div class="col-5 col-md-12 col-lg-3 align-self-center text-danger">ANALYSIS</div>
+                    </div>
+                    <p class="font-weight-bold fs-small pl-1">TRUMP IS WAGING COLD WAR 2.0</p>
+                </div>
+                <div class="col-md-3 magz">
+                    <div class="w-100">
+                        <div class="col">
+
+                            <img class="img-fluid w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/md_thumb/public/2018/12/11/periran01ususe-banner.jpg"
+                                alt="something">
+                        </div>
+
+                    </div>
+                    <div class="row mt-1 py-2 pl-3 px-lg-5 mr-lg-0">
+                        <div class="col-5 col-md-12 btn btn-danger font-weight-bold fs-small">DOWNLOADS</div>
+                        <div class="col-5 col-md-12 align-self-center text-danger">ANALYSIS</div>
+                    </div>
+                    <p class="font-weight-bold fs-small pl-1">TRUMP IS WAGING COLD WAR 2.0</p>
+                </div>
+                <div class="col-md-3 magz">
+                    <div class="w-100">
+                        <div class="col">
+
+                            <img class="img-fluid w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/md_thumb/public/2018/12/11/periran01ususe-banner.jpg"
+                                alt="something">
+                        </div>
+
+                    </div>
+                    <div class="row mt-1 py-2 pl-3 px-lg-5 mr-lg-0">
+                        <div class="col-5 col-md-12 btn btn-danger font-weight-bold fs-small">DOWNLOADS</div>
+                        <div class="col-5 col-md-12 align-self-center text-danger">ANALYSIS</div>
+                    </div>
+                    <p class="font-weight-bold fs-small pl-1">TRUMP IS WAGING COLD WAR 2.0</p>
+                </div>
+                <div class="col-md-3 magz">
+                    <div class="w-100">
+                        <div class="col">
+
+                            <img class="img-fluid w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/md_thumb/public/2018/12/11/periran01ususe-banner.jpg"
+                                alt="something">
+                        </div>
+
+                    </div>
+                    <div class="row mt-1 py-2 pl-3 px-lg-5 mr-lg-0">
+                        <div class="col-5 col-md-12 btn btn-danger font-weight-bold fs-small">DOWNLOADS</div>
+                        <div class="col-5 col-md-12 align-self-center text-danger">ANALYSIS</div>
+                    </div>
+                    <p class="font-weight-bold fs-small pl-1">TRUMP IS WAGING COLD WAR 2.0</p>
+                </div>
+                <div class="col-md-3 magz">
+                    <div class="w-100">
+                        <div class="col">
+
+                            <img class="img-fluid w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/md_thumb/public/2018/12/11/periran01ususe-banner.jpg"
+                                alt="something">
+                        </div>
+
+                    </div>
+                    <div class="row mt-1 py-2 pl-3 px-lg-5 mr-lg-0">
+                        <div class="col-5 col-md-12 btn btn-danger font-weight-bold fs-small">DOWNLOADS</div>
+                        <div class="col-5 col-md-12 align-self-center text-danger">ANALYSIS</div>
+                    </div>
+                    <p class="font-weight-bold fs-small pl-1">TRUMP IS WAGING COLD WAR 2.0</p>
+                </div>
+                <div class="col-md-3 magz">
+                    <div class="w-100">
+                        <div class="col">
+
+                            <img class="img-fluid w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/md_thumb/public/2018/12/11/periran01ususe-banner.jpg"
+                                alt="something">
+                        </div>
+
+                    </div>
+                    <div class="row mt-1 py-2 pl-3 px-lg-5 mr-lg-0">
+                        <div class="col-5 col-md-12 btn btn-danger font-weight-bold fs-small">DOWNLOADS</div>
+                        <div class="col-5 col-md-12 align-self-center text-danger">ANALYSIS</div>
+                    </div>
+                    <p class="font-weight-bold fs-small pl-1">TRUMP IS WAGING COLD WAR 2.0</p>
+                </div>
+                <div class="col-md-3 magz">
+                    <div class="w-100">
+                        <div class="col">
+
+                            <img class="img-fluid w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/md_thumb/public/2018/12/11/periran01ususe-banner.jpg"
+                                alt="something">
+                        </div>
+
+                    </div>
+                    <div class="row mt-1 py-2 pl-3 px-lg-5 mr-lg-0">
+                        <div class="col-5 col-md-12 btn btn-danger font-weight-bold fs-small">DOWNLOADS</div>
+                        <div class="col-5 col-md-12 align-self-center text-danger">ANALYSIS</div>
+                    </div>
+                    <p class="font-weight-bold fs-small pl-1">TRUMP IS WAGING COLD WAR 2.0</p>
+                </div>
+                <div class="col-md-3 magz">
+                    <div class="w-100">
+                        <div class="col">
+
+                            <img class="img-fluid w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/md_thumb/public/2018/12/11/periran01ususe-banner.jpg"
+                                alt="something">
+                        </div>
+
+                    </div>
+                    <div class="row mt-1 py-2 pl-3 px-lg-5 mr-lg-0">
+                        <div class="col-5 col-md-12 btn btn-danger font-weight-bold fs-small">DOWNLOADS</div>
+                        <div class="col-5 col-md-12 align-self-center text-danger">ANALYSIS</div>
+                    </div>
+                    <p class="font-weight-bold fs-small pl-1">TRUMP IS WAGING COLD WAR 2.0</p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!-- END OF IN THE MAGAZINE -->
+        <!-- EDITOR'S PICKS -->
+        <div class="container-fluid">
+
+            <div class="row no-gutter justify-content-center py-2 border-bottom pb-3">
+                <span class="icon-n"></span>
+                <div>EDITOR'S PICKS</div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-dark text-white mt-3 border-0 mx-auto">
+                        <img class="card-img img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2018/12/13/gettyimages-1071834222.jpg"
+                            alt="Card image cap">
+                        <div class="card-img-overlay p-0">
+                            <button class="btn btn-light Bottom text-danger font-weight-bold">U.S.</button>
+                        </div>
+                    </div>
+                    <div class="card bg-white mb-3">
+                        <div class="card-header border-0 font-weight-bold text-left p-0">TRUMP CLAIMS MEXICO IS STILL
+                            'PAYING FOR THE WALL'</div>
+                        <div class="card-body p-0 fs-small mt-3 pr-3"> "One way or the other, Mexico is going to be
+                            paying
+                            for the Wall," the president tweeted.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-dark text-white mt-3 border-0 mx-auto">
+                        <img class="card-img img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2018/12/13/gettyimages-1071834222.jpg"
+                            alt="Card image cap">
+                        <div class="card-img-overlay p-0">
+                            <button class="btn btn-light Bottom text-danger font-weight-bold">U.S.</button>
+                        </div>
+                    </div>
+                    <div class="card bg-white mb-3">
+                        <div class="card-header border-0 font-weight-bold text-left p-0">TRUMP CLAIMS MEXICO IS STILL
+                            'PAYING FOR THE WALL'</div>
+                        <div class="card-body p-0 fs-small mt-3 pr-3"> "One way or the other, Mexico is going to be
+                            paying
+                            for the Wall," the president tweeted.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-dark text-white mt-3 border-0 mx-auto">
+                        <img class="card-img img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2018/12/13/gettyimages-1071834222.jpg"
+                            alt="Card image cap">
+                        <div class="card-img-overlay p-0">
+                            <button class="btn btn-light Bottom text-danger font-weight-bold">U.S.</button>
+                        </div>
+                    </div>
+                    <div class="card bg-white mb-3">
+                        <div class="card-header border-0 font-weight-bold text-left p-0">TRUMP CLAIMS MEXICO IS STILL
+                            'PAYING FOR THE WALL'</div>
+                        <div class="card-body p-0 fs-small mt-3 pr-3"> "One way or the other, Mexico is going to be
+                            paying
+                            for the Wall," the president tweeted.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-dark text-white mt-3 border-0 mx-auto">
+                        <img class="card-img img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2018/12/13/gettyimages-1071834222.jpg"
+                            alt="Card image cap">
+                        <div class="card-img-overlay p-0">
+                            <button class="btn btn-light Bottom text-danger font-weight-bold">U.S.</button>
+                        </div>
+                    </div>
+                    <div class="card bg-white mb-3">
+                        <div class="card-header border-0 font-weight-bold text-left p-0">TRUMP CLAIMS MEXICO IS STILL
+                            'PAYING FOR THE WALL'</div>
+                        <div class="card-body p-0 fs-small mt-3 pr-3"> "One way or the other, Mexico is going to be
+                            paying
+                            for the Wall," the president tweeted.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-dark text-white mt-3 border-0 mx-auto">
+                        <img class="card-img img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2018/12/13/gettyimages-1071834222.jpg"
+                            alt="Card image cap">
+                        <div class="card-img-overlay p-0">
+                            <button class="btn btn-light Bottom text-danger font-weight-bold">U.S.</button>
+                        </div>
+                    </div>
+                    <div class="card bg-white mb-3">
+                        <div class="card-header border-0 font-weight-bold text-left p-0">TRUMP CLAIMS MEXICO IS STILL
+                            'PAYING FOR THE WALL'</div>
+                        <div class="card-body p-0 fs-small mt-3 pr-3"> "One way or the other, Mexico is going to be
+                            paying
+                            for the Wall," the president tweeted.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-dark text-white mt-3 border-0 mx-auto">
+                        <img class="card-img img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2018/12/13/gettyimages-1071834222.jpg"
+                            alt="Card image cap">
+                        <div class="card-img-overlay p-0">
+                            <button class="btn btn-light Bottom text-danger font-weight-bold">U.S.</button>
+                        </div>
+                    </div>
+                    <div class="card bg-white mb-3">
+                        <div class="card-header border-0 font-weight-bold text-left p-0">TRUMP CLAIMS MEXICO IS STILL
+                            'PAYING FOR THE WALL'</div>
+                        <div class="card-body p-0 fs-small mt-3 pr-3"> "One way or the other, Mexico is going to be
+                            paying
+                            for the Wall," the president tweeted.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-dark text-white mt-3 border-0 mx-auto">
+                        <img class="card-img img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2018/12/13/gettyimages-1071834222.jpg"
+                            alt="Card image cap">
+                        <div class="card-img-overlay p-0">
+                            <button class="btn btn-light Bottom text-danger font-weight-bold">U.S.</button>
+                        </div>
+                    </div>
+                    <div class="card bg-white mb-3">
+                        <div class="card-header border-0 font-weight-bold text-left p-0">TRUMP CLAIMS MEXICO IS STILL
+                            'PAYING FOR THE WALL'</div>
+                        <div class="card-body p-0 fs-small mt-3 pr-3"> "One way or the other, Mexico is going to be
+                            paying
+                            for the Wall," the president tweeted.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-dark text-white mt-3 border-0 mx-auto">
+                        <img class="card-img img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2018/12/13/gettyimages-1071834222.jpg"
+                            alt="Card image cap">
+                        <div class="card-img-overlay p-0">
+                            <button class="btn btn-light Bottom text-danger font-weight-bold">U.S.</button>
+                        </div>
+                    </div>
+                    <div class="card bg-white mb-3">
+                        <div class="card-header border-0 font-weight-bold text-left p-0">TRUMP CLAIMS MEXICO IS STILL
+                            'PAYING FOR THE WALL'</div>
+                        <div class="card-body p-0 fs-small mt-3 pr-3"> "One way or the other, Mexico is going to be
+                            paying
+                            for the Wall," the president tweeted.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-dark text-white mt-3 border-0 mx-auto">
+                        <img class="card-img img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2018/12/13/gettyimages-1071834222.jpg"
+                            alt="Card image cap">
+                        <div class="card-img-overlay p-0">
+                            <button class="btn btn-light Bottom text-danger font-weight-bold">U.S.</button>
+                        </div>
+                    </div>
+                    <div class="card bg-white mb-3">
+                        <div class="card-header border-0 font-weight-bold text-left p-0">TRUMP CLAIMS MEXICO IS STILL
+                            'PAYING FOR THE WALL'</div>
+                        <div class="card-body p-0 fs-small mt-3 pr-3"> "One way or the other, Mexico is going to be
+                            paying
+                            for the Wall," the president tweeted.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-dark text-white mt-3 border-0 mx-auto">
+                        <img class="card-img img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2018/12/13/gettyimages-1071834222.jpg"
+                            alt="Card image cap">
+                        <div class="card-img-overlay p-0">
+                            <button class="btn btn-light Bottom text-danger font-weight-bold">U.S.</button>
+                        </div>
+                    </div>
+                    <div class="card bg-white mb-3">
+                        <div class="card-header border-0 font-weight-bold text-left p-0">TRUMP CLAIMS MEXICO IS STILL
+                            'PAYING FOR THE WALL'</div>
+                        <div class="card-body p-0 fs-small mt-3 pr-3"> "One way or the other, Mexico is going to be
+                            paying
+                            for the Wall," the president tweeted.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-dark text-white mt-3 border-0 mx-auto">
+                        <img class="card-img img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2018/12/13/gettyimages-1071834222.jpg"
+                            alt="Card image cap">
+                        <div class="card-img-overlay p-0">
+                            <button class="btn btn-light Bottom text-danger font-weight-bold">U.S.</button>
+                        </div>
+                    </div>
+                    <div class="card bg-white mb-3">
+                        <div class="card-header border-0 font-weight-bold text-left p-0">TRUMP CLAIMS MEXICO IS STILL
+                            'PAYING FOR THE WALL'</div>
+                        <div class="card-body p-0 fs-small mt-3 pr-3"> "One way or the other, Mexico is going to be
+                            paying
+                            for the Wall," the president tweeted.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-dark text-white mt-3 border-0 mx-auto">
+                        <img class="card-img img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2018/12/13/gettyimages-1071834222.jpg"
+                            alt="Card image cap">
+                        <div class="card-img-overlay p-0">
+                            <button class="btn btn-light Bottom text-danger font-weight-bold">U.S.</button>
+                        </div>
+                    </div>
+                    <div class="card bg-white mb-3">
+                        <div class="card-header border-0 font-weight-bold text-left p-0">TRUMP CLAIMS MEXICO IS STILL
+                            'PAYING FOR THE WALL'</div>
+                        <div class="card-body p-0 fs-small mt-3 pr-3"> "One way or the other, Mexico is going to be
+                            paying
+                            for the Wall," the president tweeted.</div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+    <!-- END OF EDITOR'S PICKS -->
+
+    <!-- FEATURED SLIDESHOWS -->
+
+    <div class="container-fluid">
+
+        <div class="row no-gutter justify-content-center py-2 border-bottom pb-3">
+            <span class="icon-n"></span>
+            <div>FEATURED SLIDESHOWS</div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+
+                <div class="card bg-dark text-white my-3 mx-auto">
+                    <img class="card-img img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2018/12/13/0-gettyimages-950378502.jpg"
+                        alt="Card image cap">
+                    <div class="card-img-overlay p-0">
+                        <span class="btn btn-light Bottom text-danger font-weight-bold icon-slide text-center"></span>
+                    </div>
+                </div>
+                <div class="card bg-white my-3 border-0">
+                    <div class="border-0 font-weight-bold text-left p-0">The Royal Family’s 2018 in Photos:
+                        Weddings, Babies and A Visit from Trump</div>
+                </div>
+                <div class="card bg-dark text-white my-3 mx-auto">
+                    <img class="card-img img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2018/12/13/0-gettyimages-950378502.jpg"
+                        alt="Card image cap">
+                    <div class="card-img-overlay p-0">
+                        <span class="btn btn-light Bottom text-danger font-weight-bold icon-slide text-center"></span>
+                    </div>
+                </div>
+                <div class="card bg-white my-3 border-0">
+                    <div class="border-0 font-weight-bold text-left p-0">The Royal Family’s 2018 in Photos:
+                        Weddings, Babies and A Visit from Trump</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-dark text-white my-3 mx-auto">
+                    <img class="card-img img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2018/12/13/0-gettyimages-950378502.jpg"
+                        alt="Card image cap">
+                    <div class="card-img-overlay p-0">
+                        <span class="btn btn-light Bottom text-danger font-weight-bold icon-slide text-center"></span>
+                    </div>
+                </div>
+                <div class="card bg-white my-3 border-0">
+                    <div class="border-0 font-weight-bold text-left p-0">The Royal Family’s 2018 in Photos:
+                        Weddings, Babies and A Visit from Trump</div>
+                </div>
+
+                <div class="card bg-dark text-white my-3 mx-auto">
+                    <img class="card-img img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2018/12/13/0-gettyimages-950378502.jpg"
+                        alt="Card image cap">
+                    <div class="card-img-overlay p-0">
+                        <span class="btn btn-light Bottom text-danger font-weight-bold icon-slide text-center"></span>
+                    </div>
+                </div>
+                <div class="card bg-white my-3 border-0">
+                    <div class="border-0 font-weight-bold text-left p-0">The Royal Family’s 2018 in Photos:
+                        Weddings, Babies and A Visit from Trump</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-dark text-white my-3 mx-auto">
+                    <img class="card-img img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2018/12/13/0-gettyimages-950378502.jpg"
+                        alt="Card image cap">
+                    <div class="card-img-overlay p-0">
+                        <span class="btn btn-light Bottom text-danger font-weight-bold icon-slide text-center"></span>
+                    </div>
+                </div>
+                <div class="card bg-white my-3 border-0">
+                    <div class="border-0 font-weight-bold text-left p-0">The Royal Family’s 2018 in Photos:
+                        Weddings, Babies and A Visit from Trump</div>
+                </div>
+                <div class="card bg-dark text-white my-3 mx-auto">
+                    <img class="card-img img-fluid" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2018/12/13/0-gettyimages-950378502.jpg"
+                        alt="Card image cap">
+                    <div class="card-img-overlay p-0">
+                        <span class="btn btn-light Bottom text-danger font-weight-bold icon-slide text-center"></span>
+                    </div>
+                </div>
+                <div class="card bg-white my-3 border-0">
+                    <div class="border-0 font-weight-bold text-left p-0">The Royal Family’s 2018 in Photos:
+                        Weddings, Babies and A Visit from Trump</div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    <!-- END OF FEATURED SLIDESHOWS -->
+    <div class="d-md-none">
+        <h3 class="text-primary font-weight-bold fs-small">SPONSOR INSIGHT</h3>
+
+        <div class="card bg-light mb-3 card-no-border">
+            <div class="card bg-dark text-white ">
+                <img class="card-img" src="https://s.newsweek.com/sites/www.newsweek.com/files/expo_22492_small_expo_advert_on_home_page_685px_x_456px.jpg"
+                    alt="Card image">
+                <div class="card-img-overlay pb-0 pl-0">
+                    <button class="btn btn-light Bottom text-info font-weight-bold">SPONSOR INSIGHT</button>
+                </div>
+            </div>
+            <div class="card-header border-0 font-weight-bold">HOW INOVATION IS TRANSFORMING A NATION</div>
+            <div class="card-body">
+                <p class="card-text fs-small">It all began with a master innovator. The UAE's founding father,
+                    Sheikh Zayed, was a man with big ideas, open to new methods and peoples. Today the country
+                    masters Blockchain, hosts 200 nationalities and ranks first in innovation in the Arab
+                    World.</p>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid pt-md-3">
+        <div class="row border-bottom ">
+            <div class="col-md-6">
+                <svg class="logo-footer" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px" y="0px" viewBox="0 0 395.6 60" style="enable-background:new 0 0 395.6 60;" xml:space="preserve">
+                    <g>
+                        <path class="st0" d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7"></path>
+                    </g>
+                </svg>
+                <p class="text-muted fs-small mt-1">&copy; 2018 NEWSWEEK</p>
+            </div>
+            <div class="col-md-6 text-right">
+                <ul class="list-inline text-muted larger-text pb-2">
+                    <li class="list-inline-item"><i class="fa fa-facebook-square"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-twitter"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-google-plus"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-instagram"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-tumblr"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-linkedin"></i></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <ul class="list-unstyled col-lg-8 row mb-1 ml-0">
+                <li class="pr-3">About Us</li>
+                <li class="pr-3">Corrections</li>
+                <li class="pr-3">Contact Us</li>
+                <li class="pr-3">Travel</li>
+                <li class="pr-3">Advertise</li>
+                <li class="pr-3">Copyright</li>
+                <li class="pr-3">Terms & Conditions</li>
+                <li class="pr-3">Privacy Policy</li>
+                <li class="pr-3">Cookie Polcy</li>
+                <li class="pr-3">Terms of Sale</li>
+                <li class="pr-3">Archive</li>
+                <li class="pr-3">Announcements</li>
+                <li class="pr-3">Consent Preferences</li>
+            </ul>
+            <div class="list-unstyled col-lg-4 row">
+                <div class="col-4 col-sm-3 font-weight-bold d-inline-block">EDITIONS:</div>
+                <ul class="col-8 col-sm-9 px-0 d-inline-block">
+                    <li class="pr-3 d-inline-block">US Edition</li>
+                    <li class="pr-3 d-inline-block">Middle East</li>
+                    <li class="pr-3 d-inline-block">Japan</li>
+                    <li class="pr-3 d-inline-block">China</li>
+                    <li class="pr-3 d-inline-block">Pakistan</li>
+                    <li class="pr-3 d-inline-block">Polska</li>
+                    <li class="pr-3 d-inline-block">Romania</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
